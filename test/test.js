@@ -17,7 +17,7 @@ chai.use(chaiHttp);
 
 describe('Hit root url', function() {
   it('should return 200', function() {
-    return chai.request('http://localhost:8080')
+    return chai.request(app)
   })
 })
 
