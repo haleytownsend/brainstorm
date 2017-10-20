@@ -17,3 +17,12 @@
     "chai": "^4.1.2"
   }
 }
+
+
+{
+  "name": "brainstorm",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.5.2"
+  }
+}
