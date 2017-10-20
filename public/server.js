@@ -17,7 +17,4 @@ function closeServer() {
   });
 }
 
-module.exports = { app, server, closeServer }
-
-//each test starts with a new server and there
-//is only one server going at a time
+module.exports = { app, server, closeServer}
