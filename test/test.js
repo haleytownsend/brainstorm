@@ -6,10 +6,10 @@ const server = require('../public/server.js')
 //const {app, runServer, closeServer} = require('../server')
 
 //allows for should statements
-const should = chai.should();
+chai.should();
 
 const app = server.app;
-const storage = server.storage;
+const closeServer = server.closeServer;
 
 //allow for http requests
 chai.use(chaiHttp);
@@ -22,13 +22,14 @@ chai.use(chaiHttp);
 // })
 
 describe('index page', function() {
-  it('exists', function(done) {
-    chai.request(app)
+  after(closeServer);
+
+  it('exists', function() {
+    return chai.request(app)
       .get('/')
-      .end(function(err, res) {
+      .then(function(res) {
         res.should.have.status(200);
         res.should.be.html;
-        done();
     });
   });
 });
