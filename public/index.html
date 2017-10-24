@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
   <title>Brain Storm</title>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
-  <script src="https://use.fontawesome.com/a51fc5832f.js"></script>
-  <link href="https://use.fontawesome.com/a51fc5832f.css" media="all" rel="stylesheet">
-  <style type="text/css">@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);</style>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="float-grid.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 
 <body>
 
 <section class="section" id="row-one">
   <div class="columns">
-    <div class="column">
-      <div class="card-image">
-        <img src="brainstormimage.JPG">
-      <div>
+    <div class="column is-12">
+      <img src="brainstormimage.JPG" id="brainstorm-image"><br>
     </div>
-    <div class="card" id="row-one-card">
-      <div class="card-content" id="row-one-card-content">
-        <div class="content" id="row-one-content">
-          <h1>Brain Storm</h1>
-          <h2>An app to track the correlation between migraines and the weather</h2>
+  </div>
+
+  <div class="columns">
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <h1>Brain Storm</h1><br>
+            <p>An app to track the correlation between migraines and the weather</p>
+          </div>
         </div>
       </div>
     </div>
@@ -32,54 +33,59 @@
 
 <section class="section" id="row-two">
   <div class="columns">
-    <div class="column is-3">
+    <div class="column is-4">
       <div class="card">
         <div class="card-content">
           <div class="content">
-            <h1>Lawrence, KS</h1>
-            <input type="text" placeholder="Search for another city">
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h1>image</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="column is-2">
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h1>Precip %</h1></br>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h1>75</h1>
+            <h1>Current Weather</h1>
+            <div class="container" id="location-temp">
+    					<form action="#" class="find-location">
+    						<input type="text" placeholder="Find your location...">
+    						<input type="submit" value="Find">
+    					</form>
+              <h1> 75</h1>
+    				</div>
+            <div class="container" id="weather-image-precip">
+              <img src="--" alt="weather image">
+              <h3>Precip %</h3>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="column is-one-half">
+    <div class="column">
       <div class="card">
         <div class="card-content">
           <div class="content">
             <h1>5 Day Forecast</h1>
+            <div class="hero" data-bg-image="images/banner.png">
+		        </div>
           </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h2>Mon Tue Wed Thurs Fri</h2></br>
+			<div class="forecast-table">
+				<div class="container">
+					<div class="forecast-container">
+						<div class="today forecast">
+							<div class="forecast-header">
+								<div class="day">Monday</div>
+								<div class="date">6 Oct</div>
+							</div> <!-- .forecast-header -->
+							<div class="forecast-content">
+								<div class="location">New York</div>
+								<div class="degree">
+									<div class="num">23<sup>o</sup>C</div>
+									<div class="forecast-icon">
+										<img src="images/icons/icon-1.svg" alt="" width=90>
+									</div>
+								</div>
+								<span><img src="images/icon-umberella.png" alt="">20%</span>
+								<span><img src="images/icon-wind.png" alt="">18km/h</span>
+							</div>
+						</div>
+							</div> <!-- .forecast-header -->
+						</div>
+					</div>
+				</div>
+			</div>
           </div>
         </div>
       </div>
@@ -88,27 +94,21 @@
 </section>
 
 <section class="section" id="row-three">
-  <form>
+  <form action="">
     <div class="columns">
-      <div class="column">
-        <div class="card">
-          <div class="card-content">
-            <div class="content">
-              <h1>Log An Entry</h1>
-              <div class="card-footer">
-                <button type="radio" class="migraine">Migraine flare</button>
-                <button type="radio" class="migraine">Pain Free Day</button>
-            </div>
+      <div class="column is-one-third">
+        <div class="content">
+          <h1>Log an Entry</h1>
+          <div class="card">
+            <input type="radio" name="migraine-present" value="Yes">Migraine Flare
+            <input type="radio" name="migraine-present" value="No">Pain Free Day
           </div>
         </div>
       </div>
-      <div class="column">
-        <div class="card">
-          <div class="card-content">
-            <div class="content">
-              <button type="submit">Submit entry</button>
-            </div>
-          </div>
+      <div class="content">
+        <div class="is-two-thirds">
+          <textarea id="journal-entry" placeholder="anything else to note?" rows="6" cols="100"></textarea>
+          <button type="submit">Submit</>
         </div>
       </div>
     </div>
