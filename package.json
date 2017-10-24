@@ -1,21 +1,27 @@
 {
   "name": "brainstorm",
-  "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "serve": "http-server ./public",
-    "test": "mocha"
+  "main": "app-brain.js",
+  "directories": {
+    "test": "test"
   },
   "dependencies": {
-    "bulma": "^0.5.2",
-    "express": "^4.16.2"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^3.0.0",
     "http-server": "^0.10.0",
-    "mocha": "^4.0.1"
-  }
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haleytownsend/brainstorm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haleytownsend/brainstorm/issues"
+  },
+  "homepage": "https://github.com/haleytownsend/brainstorm#readme"
 }
