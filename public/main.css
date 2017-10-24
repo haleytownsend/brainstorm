@@ -4,20 +4,37 @@
 
 #row-two {
   background-color: #2ec4b6;
+  height: auto
 }
 
 #row-three {
   background-color: #f2f2f2;
+  height: auto
 }
 
 #row-four {
   background-color: #011627;
+  height: auto
 }
 
 #brainstorm-image {
   margin-left:35%;
 }
 
-form.input {
-  style: block
+.left {
+  float: left;
+  left: 0px;
+  padding: 10px;
+  width: 100%S
+}
+
+.right{
+  float: right;
+  right: 0px;
+  padding: 10px;
+  width: 100%
+}
+
+h1, h3, p {
+  text-align: center
 }

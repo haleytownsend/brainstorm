@@ -4,7 +4,6 @@
   <title>Brain Storm</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="float-grid.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 
@@ -16,79 +15,31 @@
       <img src="brainstormimage.JPG" id="brainstorm-image"><br>
     </div>
   </div>
-
   <div class="columns">
-    <div class="column">
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h1>Brain Storm</h1><br>
-            <p>An app to track the correlation between migraines and the weather</p>
-          </div>
-        </div>
-      </div>
+    <div class="column is-12">
+      <h1>Brain Storm</h1><br>
+      <p>An app to track the correlation between migraines and the weather</p>
     </div>
   </div>
 </section>
 
 <section class="section" id="row-two">
   <div class="columns">
-    <div class="column is-4">
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h1>Current Weather</h1>
-            <div class="container" id="location-temp">
-    					<form action="#" class="find-location">
-    						<input type="text" placeholder="Find your location...">
-    						<input type="submit" value="Find">
-    					</form>
-              <h1> 75</h1>
-    				</div>
-            <div class="container" id="weather-image-precip">
-              <img src="--" alt="weather image">
-              <h3>Precip %</h3>
-            </div>
-          </div>
+    <div class="left">
+      <h1>Current Weather</h1>
+      <div class="container" id="location-temp">
+        <div class="location">
+          <h3> Kansas City</h3>
+          <h3> 75</h3>
+			  </div>
+        <div class="container" id="weather-image-precip">
+          <img src="--" alt="weather image">
+          <h3>Precip %</h3>
         </div>
       </div>
     </div>
-    <div class="column">
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h1>5 Day Forecast</h1>
-            <div class="hero" data-bg-image="images/banner.png">
-		        </div>
-          </div>
-			<div class="forecast-table">
-				<div class="container">
-					<div class="forecast-container">
-						<div class="today forecast">
-							<div class="forecast-header">
-								<div class="day">Monday</div>
-								<div class="date">6 Oct</div>
-							</div> <!-- .forecast-header -->
-							<div class="forecast-content">
-								<div class="location">New York</div>
-								<div class="degree">
-									<div class="num">23<sup>o</sup>C</div>
-									<div class="forecast-icon">
-										<img src="images/icons/icon-1.svg" alt="" width=90>
-									</div>
-								</div>
-								<span><img src="images/icon-umberella.png" alt="">20%</span>
-								<span><img src="images/icon-wind.png" alt="">18km/h</span>
-							</div>
-						</div>
-							</div> <!-- .forecast-header -->
-						</div>
-					</div>
-				</div>
-			</div>
-          </div>
-        </div>
-      </div>
+    <div class="right">
+      <h1>5 Day Forecast</h1>
     </div>
   </div>
 </section>
@@ -99,14 +50,12 @@
       <div class="column is-one-third">
         <div class="content">
           <h1>Log an Entry</h1>
-          <div class="card">
-            <input type="radio" name="migraine-present" value="Yes">Migraine Flare
-            <input type="radio" name="migraine-present" value="No">Pain Free Day
-          </div>
+          <input type="radio" name="migraine-present" value=true>Migraine Flare
+          <input type="radio" name="migraine-present" value=false>Pain Free Day
         </div>
       </div>
-      <div class="content">
-        <div class="is-two-thirds">
+      <div class="column is-two-thirds">
+        <div class="content">
           <textarea id="journal-entry" placeholder="anything else to note?" rows="6" cols="100"></textarea>
           <button type="submit">Submit</>
         </div>
