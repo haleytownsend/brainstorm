@@ -13,6 +13,7 @@
     "http-server": "^0.10.0"
   },
   "scripts": {
+    "serve": "http-server ./public",
     "test": "test"
   },
   "repository": {
