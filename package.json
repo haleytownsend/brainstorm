@@ -7,10 +7,11 @@
     "test": "test"
   },
   "dependencies": {
-    "http-server": "^0.10.0",
-    "request": "^2.83.0"
+    "got": "^7.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  },
   "scripts": {
     "test": "test"
   },
