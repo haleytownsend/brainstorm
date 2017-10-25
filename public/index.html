@@ -1,92 +1,167 @@
-<!DOCTYPE>
-<html lang="en">
+<!DOCTYPE html>
+  <html lang="en">
 <head>
   <title>Brain Storm</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"> -->
+  <!--<link rel="stylesheet" href="main.css">--!>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
-
-<section class="section" id="row-one">
-  <div class="columns">
-    <div class="column is-12">
-      <img src="brainstormimage.JPG" id="brainstorm-image"><br>
+<!--
+<section class="section row-one container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <img src="brainstormimage.JPG" class="img-responsive center-block" alt="brain storm header"></br>
     </div>
   </div>
-  <div class="columns">
-    <div class="column is-12">
-      <h1>Brain Storm</h1><br>
-      <p>An app to track the correlation between migraines and the weather</p>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Brain Storm</h1>
+      <h4>An app to track the correlation between migraines and the weather</h4><br>
     </div>
   </div>
+</section> -->
+
+<section class="section row-two container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="well">
+        <div class="container-fluid">
+          <div class="row text-center">
+            <h2>Current Weather</h2><br>
+          </div><!--/.row text-center-->
+
+          <div class="row">
+            <form>
+              <div class="row">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for another location...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                  </span>
+                </div> <!-- /input-group -->
+              </div> <!--/row -->
+            </form></br>
+          </div><!-- /.row -->
+          <div class="row text-center">
+            <div class="col-sm-12">
+              <h2>Kansas City</h2></br>
+            </div> <!-- /.col-sm-12 -->
+          </div> <!-- /.row text-center -->
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              <h2>72°</h2>
+            </div> <!-- /.col text-center -->
+            <div class="col-sm-6">
+              <img src="weather-icon.svg" class="img-responsive" alt="Responsive image"><br>
+            </div><!-- /.col-sm-6 text-center-->
+          </div> <!-- /.row -->
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              <h3>Pressure:</h3>
+            </div><!-- /.col-sm-6 text-center-->
+            <div class="col-sm-6 text-left">
+              <h3>29.83 ↓ </h3><br> <!-- ↑ symbols ↓ -->
+            </div><!-- /.col-sm-6 text-center-->
+          </div> <!-- /.row -->
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              <h3> UV index </h3>
+            </div><!-- /.col-sm-6 text-center-->
+            <div class="col-sm-6 text-left">
+              <h3>3 out of 10</h3>
+            </div><!-- /.col-sm-6 text-center-->
+          </div> <!-- /.row -->
+
+        </div> <!-- /.container-fluid -->
+      </div> <!-- /.well -->
+    </div> <!-- col-sm-6 -->
+    
+<!--BEGIN 5 DAY FOREBAST -->
+
+    <div class="col-sm-6">
+      <div class="well">
+        <div class="container-fluid">
+          <div class="row is-center">
+            <h3 class="text-center">5 Day Forecast</h3>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                    <th>Day</th><th>Temp. °F</th><th>Description</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
+                  </tr>
+                  <tr>
+                    <td>Thursday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
+                  </tr>
+                  <tr>
+                    <td>Friday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> <!-- /.table-responsive -->
+          </div> <!--/.row-->
+        </div> <!--/.container-fluid-->
+      </div> <!--/.well-->
+    </div> <!--/.col-sm-6-->
+  </div> <!--/.row-->
 </section>
 
-<section class="section" id="row-two">
-  <div class="columns">
-    <div class="left">
-      <h1>Current Weather</h1>
-      <div class="container" id="location-temp">
-        <div class="location">
-          <h3> Kansas City</h3>
-          <h3 id="current-temp"> 75</h3>
-			  </div>
-        <div class="container" id="weather-image-precip">
-          <img src="--" alt="weather image">
-          <h3>Precip %</h3>
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <h1>5 Day Forecast</h1>
-    </div>
-  </div>
+
+<section class="section row-three container-fluid">
+  <div class="well">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h3>Log an Entry</h3></br>
+  <!--left well-->
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="well left">
+              <h2>test left</h2>
+            </div> <!--well left-->
+          </div> <!--col-sm-6-->
+<!--right well-->
+          <div class="col-sm-6">
+            <div class="well right">
+              <h2>test right</h2>
+            </div> <!--well left-->
+          </div> <!--col-sm-6-->
+        </div> <!--./row-->
+      </div><!--../col-sm-12 text-center-->
+    </div><!--/.row-->
+  </div> <!--./well-->
 </section>
 
-<section class="section" id="row-three">
-  <form action="">
-    <div class="columns">
-      <div class="column is-one-third">
-        <div class="content">
-          <h1>Log an Entry</h1>
-          <input type="radio" name="migraine-present" value=true>Migraine Flare
-          <input type="radio" name="migraine-present" value=false>Pain Free Day
-        </div>
-      </div>
-      <div class="column is-two-thirds">
-        <div class="content">
-          <textarea id="journal-entry" placeholder="anything else to note?" rows="6" cols="100"></textarea>
-          <button type="submit">Submit</>
-        </div>
-      </div>
-    </div>
-  </form>
-</section>
-
-<section class="section" id="row-four">
-  <div class="columns">
-    <div class="column">
-      <div class="card">
-        <div class="card-content">
+<section class="row-four container">
+  <div class="well">
+    <h3>Correlation</h3></br>
+    <form action="">
+      <div class="row">
+        <div class="col-md-6">
           <div class="content">
-            <h1>Correlation results</h1>
+            <div class="table-responsive">
+              <table class="table"> data test
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <h1>History</h1>
-          </div>
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
 </section>
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
