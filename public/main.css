@@ -1,14 +1,14 @@
 
-.row{
-  background-color: #ffffff
-}
-
-.row-two {
+.row {
   background-color: #2ec4b6;
   height: auto
 }
 
-.row-three {
+.row-one{
+  background-color: #ffffff
+}
+
+.well{
   background-color: #f2f2f2;
   height: auto
 }
