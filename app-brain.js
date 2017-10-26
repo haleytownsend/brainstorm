@@ -2,54 +2,66 @@ var USER_ENTRIES = {
   "userEntries": [
     {
       "id": "1111",
-      "migraine": true,
-      "painIntensity": 4,
-      "medication": [
+      "painIntensity": 6,
+      "triggers": [
         {
-          "sumitriptan": false,
-          "excedrin": false,
-          "other": false,
+          "Stress": false,
+          "Sleep": false,
+          "Hormones": false,
+          "Food": true,
+          "Alcohol": false,
+          "Activity": false
       },
+      "water": 2
       "journalText": "The users journal with daily notes will be here.",
       "publishedAt": 147001697669
     },
     {
       "id": "2222",
-      "migraine": false,
-      "painIntensity": 0,
-      "medication": [
+      "painIntensity": 4,
+      "triggers": [
         {
-          "sumitriptan": false,
-          "excedrin": false,
-          "other": false,
+          "Stress": false,
+          "Sleep": false,
+          "Hormones": false,
+          "Food": true,
+          "Alcohol": false,
+          "Activity": false
       },
-      "journalText": "User 2's journal with daily notes will be here.",
+      "water": 5
+      "journalText": "The users journal with daily notes will be here.",
       "publishedAt": 147001697669
     },
     {
       "id": "3333",
-      "migraine": true,
-      "painIntensity": 7,
-      "medication": [
+      "painIntensity": 3,
+      "triggers": [
         {
-          "sumitriptan": false,
-          "excedrin": false,
-          "other": false,
+          "Stress": true,
+          "Sleep": false,
+          "Hormones": false,
+          "Food": false,
+          "Alcohol": false,
+          "Activity": true
       },
-      "journalText": "User 3's journal with daily notes will be here.",
+      "water": 1
+      "journalText": "The users journal with daily notes will be here.",
       "publishedAt": 147001697669
     },
     {
       "id": "4444",
-      "migraine": false,
-      "painIntensity": 0,
-      "medication": [
+      "painIntensity": 6,
+      "triggers": [
         {
-          "sumitriptan": false,
-          "excedrin": false,
-          "other": false,
+          "Stress": false,
+          "Sleep": false,
+          "Hormones": true,
+          "Food": true,
+          "Alcohol": false,
+          "Activity": false
       },
-      "journalText": "User 4's journal with daily notes will be here.",
+      "water": 2
+      "journalText": "The users journal with daily notes will be here.",
       "publishedAt": 147001697669
     },
   ]

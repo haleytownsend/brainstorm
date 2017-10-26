@@ -1,23 +1,22 @@
-
 const chai = require('chai');
-const chaiHttp = require('chai-http');
-const server = require('../public/server.js')
+const server = require('../src/server');
 const should = chai.should();
 
 const app = server.server;
 const closeServer = server.closeServer;
 
-chai.use(chaiHttp);
+chai.use(require('chai-http'));
 
-describe('index page', function() {
+describe('Static Server', function() {
   after(closeServer);
 
-  it('exists', function(done) {
+  it('serves the Brain Storm app', function(done) {
    chai.request(app)
     .get('/')
     .end(function(err, res) {
       res.should.have.status(200);
-      res.should.be.html});
+      res.should.be.html;
       done();
-      });
     });
+  });
+});
