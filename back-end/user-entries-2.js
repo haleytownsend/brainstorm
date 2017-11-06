@@ -53,10 +53,9 @@
       "hormones": false,
       "physicalActivity": true,
       "sleep": false,
-      "stress": true
-    ], //triggers
-    "water": 2,
-    "journal": "Lorem ipsum dolor sit amet."
-  }, //migraine
+      "stress": true;
+      "water": 2,
+      "journal": "Lorem ipsum dolor sit amet."
+  ]}, //migraine
 
 } //entry 1

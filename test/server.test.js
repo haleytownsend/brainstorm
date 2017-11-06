@@ -1,19 +1,16 @@
 const chai = require('chai');
-const chaiHttp = require('chai-http');
-const server = require('../src/server.js')
-const should = chai.should();
+const { app, runServer, closeServer } = require('../src/server');
 
-const app = server.server;
-const closeServer = server.closeServer;
-const callOWM =server.callOWM
-
-chai.use(chaiHttp);
+chai.use(require('chai-http'));
+chai.should();
 
 describe('Brain Storm app', function() {
-  after(closeServer);
 
-  it('Brain Storm app opens on server', function(done) {
-   chai.request(app)
+  beforeEach(runServer);
+  afterEach(closeServer);
+
+  xit('Brain Storm app opens on server', function(done) {
+   return chai.request(app)
     .get('/')
     .end(function(err, res) {
       res.should.have.status(200);
@@ -21,13 +18,22 @@ describe('Brain Storm app', function() {
       done();
       });
 
-  it('Will send a request to the Open Weather Map API', function(){
-    chai.request(app)
-     .get('http://api.openweathermap.org/data/2.5/weather?q=portland&units=imperial&appid=431f20e3dec4bfcfd571665b88c0f488')
-     .end(function(res) {
-       res.should.have.status(200);
-       res.should.be.an.object;
+  it('does something that is not implemented yet');
+
+  xit('should list all entries on GET', function() {
+    return chai.request(app)
+      .get('/user-entry')
+      .then(function(res) {
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.be.a('array');
+        res.body.length.should.be.above(0);
+        res.body.forEach(function(item) {
+          item.should.be.a('object');
+          item.should.have.all.keys('id', 'title', 'content', 'author');
       });
     });
-
   });
+
+
+});

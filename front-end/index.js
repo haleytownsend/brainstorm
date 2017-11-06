@@ -1,46 +1,3 @@
-// var API_BASE_URL ="http://api.openweathermap.org/data/2.5/weather?";
-//
-// function loadWeatherData () {
-//   return $.ajax(API_BASE_URL, {
-//     data: {
-//       "q": 'KansasCity',
-//       "appId": '431f20e3dec4bfcfd571665b88c0f488',
-//       "weather": {
-//         "main": "Clouds",
-//         "icon": "04d"
-//         },
-//       "main": {
-//         "temp": 40,
-//         "pressure": 100
-//         },
-//       }
-//     })
-//     .then(function (data) {
-//       console.log(loadWeatherData())
-//     });
-//   }
-//
-// $(document).ready(function() {
-//   loadWeatherData();
-
-
-var callOWM = function() {
-  const request = require('request');
-  const argv = require('yargs').argv;
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=portland&units=imperial&appid=431f20e3dec4bfcfd571665b88c0f488`;
-  request(url, function (err, response, body) {
-    if(err){
-      console.log('error:', error);
-    } else {
-      let weather = JSON.parse(body)
-      //let message = `It's ${weather.main.temp} degrees in ${weather.name}! `;
-      console.log(weather);
-    };
-  });
-}
-
-
-
 var ctx = document.getElementById("myLineChart");
 var myLineChart = new Chart(ctx, {
     type: 'line',
@@ -78,7 +35,6 @@ var myLineChart = new Chart(ctx, {
         }
     }
 });
-
 
 
 var ctx = document.getElementById("myBarChart");
@@ -119,6 +75,7 @@ var myBarChart = new Chart(ctx, {
     }
 });
 
+
 var ctx = document.getElementById("myRadarChart");
 var myRadarChart = new Chart(ctx, {
   type: 'radar',
@@ -150,7 +107,6 @@ var myRadarChart = new Chart(ctx, {
     }
   }
 });
-
 
 //
 //
