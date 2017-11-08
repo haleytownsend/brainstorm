@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
 <head>
   <title>Brain Storm</title>
   <!--<link rel="stylesheet" href="main.css">-->
@@ -47,10 +47,10 @@
           </div> <!-- /.row text-center -->
           <div class="row">
             <div class="col-sm-6 text-right">
-              <h2 id="temp">72°</h2>
+              <h2 id="temperature">-°</h2>
             </div> <!-- /.col text-center -->
             <div class="col-sm-6">
-              <img id="weather-icon" src="weather-icon.svg" class="img-responsive" alt="Responsive image"><br>
+              <div id="weather-icon"></div><br>
             </div><!-- /.col-sm-6 text-center-->
           </div> <!-- /.row -->
           <div class="row">
@@ -58,15 +58,15 @@
               <h3>Pressure:</h3>
             </div><!-- /.col-sm-6 text-center-->
             <div class="col-sm-6 text-left">
-              <h3 id="pressure">29.83 ↓ </h3><br> <!-- ↑ symbols ↓ -->
+              <h3 id="pressure">-</h3><br> <!-- ↑ symbols ↓ -->
             </div><!-- /.col-sm-6 text-center-->
           </div> <!-- /.row -->
           <div class="row">
             <div class="col-sm-6 text-right">
-              <h3> UV index: </h3>
+              <h3> Humidity: </h3>
             </div><!-- /.col-sm-6 text-center-->
             <div class="col-sm-6 text-left">
-              <h3 id="UV-index">3 out of 10</h3><br>
+              <h3 id="humidity">-</h3><br>
             </div><!-- /.col-sm-6 text-center-->
           </div> <!-- /.row -->
           <div class="row">
@@ -96,21 +96,11 @@
                   <th>Day</th><th>Temp. °F</th><th>Description</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Monday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
-                  </tr>
-                  <tr>
-                    <td>Tuesday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
-                  </tr>
-                  <tr>
-                    <td>Wednesday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
-                  </tr>
-                  <tr>
-                    <td>Thursday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
-                  </tr>
-                  <tr>
-                    <td>Friday</td><td>72°</td><td><img src="weather-icon.svg" class="img-responsive" alt="Responsive image"></td>
-                  </tr>
+                  <tr><td id="day1"></td><td id="day1-temp">-°</td><td id="day1-icon"></td></tr>
+                  <tr><td id="day2"></td><td id="day2-temp">-°</td><td id="day2-icon"></td></tr>
+                  <tr><td id="day3"></td><td id="day3-temp">-°</td><td id="day3-icon"></td></tr>
+                  <tr><td id="day4"></td><td id="day4-temp">-°</td><td id="day4-icon"></td></tr>
+                  <tr><td id="day5"></td><td id="day5-temp">-°</td><td id="day5-icon"></td></tr>
                 </tbody>
               </table>
             </div> <!-- /.table-responsive -->
@@ -202,5 +192,6 @@
 <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="owm.js"></script>
   <script src="index.js"></script>
 </html>
