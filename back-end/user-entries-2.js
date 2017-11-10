@@ -47,15 +47,10 @@
 
   "migraine_API": {
     "intensity": 1,
-    "triggers": [
-      "alcohol": false,
-      "food": true,
-      "hormones": false,
-      "physicalActivity": true,
-      "sleep": false,
-      "stress": true;
-      "water": 2,
-      "journal": "Lorem ipsum dolor sit amet."
+    "triggers": ["alcohol", "food"],
+    "water":
+    "journal": "Lorem ipsum dolor sit amet."
+
   ]}, //migraine
 
 } //entry 1

@@ -39,6 +39,24 @@ owm.getForecast({
   })
 
 
+  $( function() {
+    $('#slider').slider({
+      value:5,
+      min: 0,
+      max: 10,
+      step: 1,
+      slide: function(ev, ui) {
+        // console.log('Value changed:', arguments);
+        $( '#migraine-level' ).html( ui.value );
+      }
+    });
+    //$( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+  } );
+
+
+
+
+
 var ctx = document.getElementById("myLineChart");
 var myLineChart = new Chart(ctx, {
     type: 'line',

@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 </head>
 
 <body>
@@ -117,43 +118,81 @@
       <div class="col-sm-12 text-center">
         <h2>Log a Migraine</h2>
         <div class="well">
-          <h3>Current level of pain</h3>
-          <div class="btn-group btn-group-justified">
-            <a href="#" class="btn btn-link btn-md">1</a>
-            <a href="#" class="btn btn-link btn-md">2</a>
-            <a href="#" class="btn btn-link btn-md">3</a>
-            <a href="#" class="btn btn-link btn-md">4</a>
-            <a href="#" class="btn btn-link btn-md">5</a>
-            <a href="#" class="btn btn-link btn-md">6</a>
-            <a href="#" class="btn btn-link btn-md">7</a>
-            <a href="#" class="btn btn-link btn-md">8</a>
-            <a href="#" class="btn btn-link btn-md">9</a>
-            <a href="#" class="btn btn-link btn-md">10</a>
-          </div><!--/.btn-group btn-group-justified-->
+          <h3>Current level of pain: <span id="migraine-level"></span></h3></br>
+            <div id="slider"></div>
+            <!--
+            <div class="btn-group btn-group-justified">
+              <a href="#" class="btn btn-link btn-md">1</a>
+              <a href="#" class="btn btn-link btn-md">2</a>
+              <a href="#" class="btn btn-link btn-md">3</a>
+              <a href="#" class="btn btn-link btn-md">4</a>
+              <a href="#" class="btn btn-link btn-md">5</a>
+              <a href="#" class="btn btn-link btn-md">6</a>
+              <a href="#" class="btn btn-link btn-md">7</a>
+              <a href="#" class="btn btn-link btn-md">8</a>
+              <a href="#" class="btn btn-link btn-md">9</a>
+              <a href="#" class="btn btn-link btn-md">10</a>
+            </div>
+            -->
+          <!--/.btn-group btn-group-justified-->
         </div><!--/.well-->
       </div> <!--col-sm-12 text-center-->
     </div><!--row-->
 <!--row 4-->
     <div class="row">
-      <div class="col-sm-3 text-center">
+      <div class="col-sm-3">
         <div class="list-group">
           <h4>Other known triggers</h4>
-          <button type="button" class="list-group-item">Stress</button>
-          <button type="button" class="list-group-item">Change in sleeping habits</button>
-          <button type="button" class="list-group-item">Hormones</button>
-          <button type="button" class="list-group-item">Food triggers</button>
-          <button type="button" class="list-group-item">Alcohol</button>
-          <button type="button" class="list-group-item">Physical activity</button>
+
+          <p>
+            <input type="checkbox" name="triggers[]" id="trigger-stress">
+            <label for="trigger-stress">Stress</label>
+          </p>
+          <p>
+            <input type="checkbox" name="triggers[]" id="trigger-sleep">
+            <label for="trigger-sleep">Change in sleeping habits</label>
+          </p>
+          <p>
+            <input type="checkbox" name="triggers[]" id="trigger-hormones">
+            <label for="trigger-hormones">Hormones</label>
+          </p>
+          <p>
+            <input type="checkbox" name="triggers[]" id="trigger-food">
+            <label for="trigger-food">Food triggers</label>
+          </p>
+          <p>
+            <input type="checkbox" name="triggers[]" id="trigger-alcohol">
+            <label for="trigger-alcohol">Alcohol</label>
+          </p>
+          <p>
+            <input type="checkbox" name="triggers[]" id="trigger-physical">
+            <label for="trigger-physical">Physical activity</label>
+          </p>
         </div><!--/.list-group-->
       </div><!--/.col-sm-3-->
-      <div class="col-sm-3 text-center">
+      <div class="col-sm-3">
         <div class="list-group">
           <h4>Glasses of water today?</h4>
-          <button type="button" class="list-group-item">Uhmm.. no water today</button>
-          <button type="button" class="list-group-item">One to two cups.. I've started</button>
-          <button type="button" class="list-group-item">Three to five cups.. Getting closer</button>
-          <button type="button" class="list-group-item">Six to seven cups.. Almost there</button>
-          <button type="button" class="list-group-item">8+ cups today.. Nailed it</button>
+          <p>
+            <input type="radio" id="glasses-of-water" value="0">
+            <label for="glasses-of-water">0</label>
+          </p>
+          <p>
+            <input type="radio" id="glasses-of-water" value="1-2">
+            <label for="glasses-of-water">1-2</label>
+          </p>
+          <p>
+            <input type="radio" id="glasses-of-water" value="3-5">
+            <label for="glasses-of-water">3-5</label>
+          </p>
+          <p>
+            <input type="radio" id="glasses-of-water" value="6-7">
+            <label for="glasses-of-water">6-7</label>
+          </p>
+          <p>
+            <input type="radio" id="glasses-of-water" value="8">
+            <label for="glasses-of-water">8+</label>
+          </p>
         </div><!--/.list-group-->
       </div><!--/.col-sm-3-->
       <div class="col-sm-6">
@@ -192,6 +231,8 @@
 <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
   <script src="owm.js"></script>
   <script src="index.js"></script>
 </html>
