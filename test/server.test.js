@@ -18,7 +18,7 @@ describe('Brain Storm app', function() {
       done();
       });
 
-  it('does something that is not implemented yet');
+  xit('does something that is not implemented yet');
 
   xit('should list all entries on GET', function() {
     return chai.request(app)

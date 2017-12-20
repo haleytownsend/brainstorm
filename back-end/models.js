@@ -1,33 +1,32 @@
+//setting schema and model for migraine entries.
+//TO BE used in mongoDB docs 
+
 const mongoose = require('mongoose');
 
-const userEntrySchema = mongoose.Schema({
-  intensity: {type: Number, required: true},
-  triggers: [
-    alcohol: {type: Boolean, required: false},
-    food: {type: Boolean, required: false},
-    hormones: {type: Boolean, required: false},
-    sleep: {type: Boolean, required: false},
-    stress: {type: Boolean, required: false}],
-  water: {type: Number, required: true},
-  journal: {type: String, required: false},
-  created: {type: Date, default: Date.now}]
-  }
+const schema = mongoose.Schema({
+  intensity: { type: Number, required: true },
+  triggers: { type: [String] },
+  water: { type: Number, required: true },
+  journal: { type: String, required: false },
+  created: { type: Date, default: Date.now }
 });
 
-userEntrySchema.virtual('intensity').get(function() {
-  return `${this.author.firstName} ${this.author.lastName}`.trim();
-});
-
-userEntrySchema.methods.apiRepr = function() {
+/**
+ * apiRepr
+ *
+ * Custom representation of a migraine occurrence stored in database
+ */
+schema.methods.apiRepr = function() {
   return {
     id: this._id,
-    author: this.authorName,
-    content: this.content,
-    title: this.title,
+    intensity: this.intensity,
+    triggers: this.triggers,
+    water: this.water,
+    journal: this.journal,
     created: this.created
   };
 }
 
-const userEntry = mongoose.model('userEntry', userEntrySchema);
+const model = mongoose.model('migraine', schema);
 
-module.exports = {userEntry};
+module.exports = { schema, model}

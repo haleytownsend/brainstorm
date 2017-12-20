@@ -1,4 +1,4 @@
-
+//
 const APP_ID = 'f9028ce0e04f945b512e9f393e22ab91'
 const API_BASE_URL = '//api.openweathermap.org/data/2.5'
 
@@ -8,7 +8,6 @@ owm.getWeather = function (options) {
   if (!options || !options.city) {
     return Promise.reject(new Error('Option `city` is required'))
   }
-
   return jQuery.ajax(API_BASE_URL + '/weather', {
     data: {
       units: 'imperial',
