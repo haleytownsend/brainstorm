@@ -2,12 +2,13 @@
 .row-one {
   background-color: #ffffff;
   height: auto;
-  padding-top: 25px
+  padding-top: 35px
 }
 
 .row-two {
   background-color: #f2f2f2;
-  height: auto
+  height: auto;
+  padding-left:100px
 }
 
 .row-three, .log-in{
@@ -22,7 +23,8 @@
 
 .log-in {
   height: 300px;
-  padding-top: 30px
+  padding-top: 30px;
+  margin: 50px
 }
 
 h1, h3, p, .login {

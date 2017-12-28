@@ -1,19 +1,21 @@
 var currentCity = 'Kansas City'
 
 //load sign in page
-// $(function signInPage(){
-//   $('.login').show();
-//   $(".section").hide();
-//   $('.row-one').show()
-// })
-//
-// //move to home page when submit button is clicked.
-// $('.submit').on("click", function(event) {
-//     event.preventDefault();
-//     $('.section').show();
-//     $(".log-in").hide();
-//     getNewWeather(currentCity);
-//   })
+$(function signInPage(){
+  $('.login').show();
+  $('.row-one').show();
+  $('.row-two').hide();
+  $('.row-three').hide();
+  $('.row-four').hide()
+})
+
+//move to home page when submit button is clicked.
+$('.submit').on("click", function(event) {
+    event.preventDefault();
+    $('.section').show();
+    $(".log-in").hide();
+    getNewWeather(currentCity);
+  })
 
 //run both functions to GET from owm API suing 'currentCity'
 function getNewWeather(currentCity){
@@ -89,10 +91,6 @@ $waterButtons.click(ev => {
 })
 
 //migraine log
-$('#submit-btn').on('click', function(event) {
-    console.log($('#migraine-level').val());
-    event.preventDefault();
-
     var triggers = []
     $('.trigger:checked').each((index, el) => triggers.push($(el).attr('value')))
 
@@ -111,25 +109,13 @@ $('#submit-btn').on('click', function(event) {
     })
   })
 
+  $('#submit-btn').on('click', function(event) {
+      console.log($('#migraine-level').val());
+      event.preventDefault();
+
 //log in page
   //set up form verification
-  //API to keep users datq and check log in data against
-
-//weather
-
-
-//migraine
-  //log migraine entries to database
-  //set up mLab
-  //
-
-//charts
-  //call weather data AND migraine data
-
-  //set all charts in 1 function
-    //set variables once
-      //
-    //call needed variables to each chart
+  //API to keep users data and check log in data against
 
 //Line chart
 var ctx = document.getElementById("myLineChart");
@@ -207,37 +193,4 @@ var myBarChart = new Chart(ctx, {
             }]
         }
     }
-});
-
-//Radar chart
-var ctx = document.getElementById("myRadarChart");
-var myRadarChart = new Chart(ctx, {
-  type: 'radar',
-  data: {
-    labels: ["Sunny", "Rain", "Wind", "Storms", "Swing in Bar Pressure", "Swing in Temp"],
-    datasets: [{
-      label: 'Intensity of pain',
-      data: [4, 1, 8, 3, 2, 7],
-      backgroundColor: 'rgba(255, 159, 64, .4)',
-    },
-    {
-      label: 'cups of water',
-      data: [1, 2, 8, 4, 6, 7],
-      backgroundColor: 'rgba(75, 192, 192, .4)',
-    },
-    {
-      label: '# of migraines',
-      data: [3, 9, 3, 5, 2, 3],
-      backgroundColor: 'rgba(153, 162, 64, .4)',
-    },
-  ]},
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero:true
-        }
-      }]
-    }
-  }
 });
